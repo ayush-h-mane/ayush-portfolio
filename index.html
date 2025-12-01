@@ -1,121 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Ayush H Mane — Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ayush H Mane — Portfolio</title>
 
-<!-- FONTS -->
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<!-- FIXED FONT AWESOME (100% ICONS WORK) -->
-<script src="https://kit.fontawesome.com/4f3ce16e3e.js" crossorigin="anonymous"></script>
-
-<!-- CSS -->
-<link rel="stylesheet" href="styles.css" />
-
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body class="dark">
 
-<!-- NAVBAR -->
-<nav class="navbar">
-  <div class="nav-left"></div>
-
-  <div class="nav-center">
-    <a href="#hero">Home</a>
-    <a href="#about">About</a>
-    <a href="#education">Education</a>
-    <a href="#activities">Activities</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-  </div>
-
-  <div class="nav-right">
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-left">Ayush</div>
+    <div class="nav-center">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#activities">Activities</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
     <button id="themeToggle" class="theme-btn">🌙</button>
-  </div>
-</nav>
+  </nav>
 
-<!-- HERO -->
-<section class="hero-section" id="hero">
-  <div class="img-wrapper">
-    <img src="pic1.JPG" alt="Ayush">
-  </div>
+  <!-- HERO -->
+  <section class="hero-section" id="hero">
+    <div class="img-wrapper">
+      <img src="pic1.JPG" alt="Ayush">
+    </div>
 
-  <h1 class="fade-in">Ayush H Mane</h1>
-  <p class="tagline slide-up">AI & ML Engineer • Cybersecurity • LLM Developer</p>
+    <h1 class="fade-in">Ayush H Mane</h1>
+    <p class="tagline fade-in">AI & ML Engineer • Cybersecurity • LLM Developer</p>
 
-  <div class="social-icons fade-in">
+    <!-- Social Glass Card -->
+    <div class="social-card fade-in">
+      <a href="https://www.instagram.com/ayush_h_mane" class="icon"><img src="insta_logo.jpg" alt="Instagram"></a>
+      <a href="https://www.linkedin.com/in/ayush-h-mane" class="icon"><img src="in.png" alt="LinkedIn"></a>
+      <a href="https://github.com/ayush-h-mane" class="icon"><img src="github.png" alt="GitHub"></a>
+      <a href="mailto:ayushhmane@gmail.com" class="icon"><img src="gmail.png" alt="Email"></a>
+    </div>
 
-  <a href="https://www.instagram.com/ayush_h_mane" 
-     target="_blank" 
-     rel="noopener noreferrer" 
-     class="icon instagram" 
-     title="Instagram">
-      <img src="insta_logo.jpg" alt="Instagram">
-  </a>
+    <div class="buttons fade-in">
+      <a href="resume.png" download class="btn">Download Resume</a>
+      <a href="#projects" class="btn secondary">View Projects</a>
+    </div>
+  </section>
 
-  <a href="https://www.linkedin.com/in/ayush-h-mane" 
-     target="_blank" 
-     rel="noopener noreferrer" 
-     class="icon linkedin" 
-     title="LinkedIn">
-      <img src="in.png" alt="LinkedIn">
-  </a>
+  <!-- ABOUT -->
+  <section class="section about reveal" id="about">
+    <h2>About Me</h2>
 
-  <a href="https://github.com/ayush-h-mane" 
-     target="_blank" 
-     rel="noopener noreferrer" 
-     class="icon github" 
-     title="GitHub">
-      <img src="github.png" alt="GitHub">
-  </a>
+    <p>
+      I am an AIML engineering student with a strong interest in building AI-powered systems that solve
+      real-world cybersecurity and data intelligence challenges. My technical work includes developing
+      intrusion detection models, malicious URL classifiers, and LLM-driven financial analysis tools
+      using frameworks such as Scikit-Learn, LangChain, Streamlit, and Groq LLMs. I enjoy converting
+      complex datasets into meaningful insights, designing scalable ML pipelines, and creating clean,
+      intuitive user interfaces that make AI models practical and impactful.
+    </p>
 
-  <a href="mailto:ayushhmane@gmail.com" 
-     class="icon gmail" 
-     title="Email">
-      <img src="gmail.png" alt="Email">
-  </a>
+    <p>
+      Beyond academics, I am actively involved in cultural, leadership, and community-focused
+      initiatives. I have represented my institution in several high-visibility events, including
+      securing <strong>1st place in Yuva Dasara Mime</strong>, competing in <strong>Rangarourbha
+      state-level cultural programs</strong>, and contributing to university cultural activities
+      through <strong>team utkarsh.</strong> Currently active member of <strong>Acharya Kannada Vedike</strong>. I was also a 
+      <strong>Coordinator for Srishti Innovation Exchange 2025</strong>, which strengthened my
+      leadership, teamwork, and event management skills.
+    </p>
 
-</div>
-
-
-  <div class="buttons fade-in">
-    <a href="resume.png" download class="btn">Download Resume</a>
-    <a href="#projects" class="btn secondary">View Projects</a>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section class="section about reveal" id="about">
-  <h2>About Me</h2>
-
-  <p>
-    I am an AIML engineering student with a strong interest in building AI-powered systems that solve
-    real-world cybersecurity and data intelligence challenges. My technical work includes developing
-    intrusion detection models, malicious URL classifiers, and LLM-driven financial analysis tools
-    using frameworks such as Scikit-Learn, LangChain, Streamlit, and Groq LLMs. I enjoy converting
-    complex datasets into meaningful insights, designing scalable ML pipelines, and creating clean,
-    intuitive user interfaces that make AI models practical and impactful.
-  </p>
-
-  <p>
-    Beyond academics, I am actively involved in cultural, leadership, and community-focused
-    initiatives. I have represented my institution in several high-visibility events, including
-    securing <strong>1st place in Yuva Dasara Mime</strong>, competing in <strong>Rangarourbha
-    state-level cultural programs</strong>, and contributing to university cultural activities
-    through <strong>team utkarsh.</strong> Currently active member of <strong>Acharya Kannada Vedike</strong>. I was also a 
-    <strong>Coordinator for Srishti Innovation Exchange 2025</strong>, which strengthened my
-    leadership, teamwork, and event management skills.
-  </p>
-
-  <p>
-    These experiences have helped me grow as a well-rounded individual—blending technical expertise
-    with creativity, collaboration, and leadership. I am passionate about building AI systems that
-    create real, meaningful impact.
-  </p>
-</section>
+    <p>
+      These experiences have helped me grow as a well-rounded individual—blending technical expertise
+      with creativity, collaboration, and leadership. I am passionate about building AI systems that
+      create real, meaningful impact.
+    </p>
+  </section>
 
 <!-- EDUCATION -->
 <section class="section reveal" id="education">
@@ -256,5 +221,6 @@ window.addEventListener('load', revealOnScroll);
 
 </body>
 </html>
+
 
 

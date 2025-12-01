@@ -224,3 +224,21 @@ footer{
   font-size:0.9rem;
   color:#6b7280;
 }
+/* PROJECTS – GitHub link icon */
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-link img {
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.project-link img:hover {
+  transform: scale(1.2);
+  filter: brightness(1.3);
+}

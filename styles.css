@@ -84,25 +84,33 @@ h1, h2, h3 {
   margin-top:10px;
 }
 
-/* SOCIAL ICONS — SVG SUPPORT */
-.social-icons {
-  margin-top: 15px;
+/* SOCIAL ICON GLASS CARD */
+.social-card {
+  margin-top: 25px;
+  padding: 18px 28px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  display: inline-flex;
+  gap: 22px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
 }
 
-.icon {
-  margin: 0 12px;
-  display: inline-block;
-  cursor: pointer;
+/* SOCIAL ICONS */
+.icon img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  transition: 0.25s ease;
 }
 
-.icon svg {
-  width: 28px;
-  height: 28px;
-  transition: 0.3s ease;
-}
-
-.icon:hover svg {
-  transform: scale(1.15);
+.icon:hover img {
+  transform: scale(1.18);
+  filter: brightness(1.4);
 }
 
 /* BUTTONS */
@@ -133,7 +141,7 @@ h2{
   margin-bottom:20px;
 }
 
-/* ABOUT — JUSTIFIED */
+/* ABOUT JUSTIFICATION */
 .about p {
   text-align: justify;
 }
@@ -197,7 +205,7 @@ h2{
   height:120px;
 }
 
-/* SCROLL REVEAL */
+/* SCROLL REVEAL ANIMATION */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
@@ -216,5 +224,3 @@ footer{
   font-size:0.9rem;
   color:#6b7280;
 }
-
-

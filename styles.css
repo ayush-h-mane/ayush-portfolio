@@ -47,7 +47,7 @@ h1, h2, h3 {
   position: fixed;
   top: 0;
   left: 0;
-  height: 4px;
+  height: 1px;
   width: 0%;
   background: linear-gradient(90deg, #00f5ff, #00ff99);
   z-index: 9999;
@@ -510,3 +510,4 @@ footer {
     width: 180px;
   }
 }
+

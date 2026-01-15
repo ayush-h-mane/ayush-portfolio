@@ -216,9 +216,9 @@ input:checked + .switch .slider::before {
 }
 
 .slider-track img {
-  width: 250px;
+  width: 200px;
   height: 350px;
-  object-fit: contain;
+  object-fit: cover;
   margin-right: 15px;
   border-radius: 12px;
   opacity: 0.9;

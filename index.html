@@ -1,38 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ayush H Mane — Portfolio</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ayush H Mane — Portfolio</title>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="styles.css" />
+<!-- SEO -->
+<meta name="description" content="Ayush H Mane | AI & ML Engineer | Cybersecurity | LLM Developer Portfolio">
+<meta name="keywords" content="Ayush Mane, AI Engineer, Machine Learning, Cybersecurity, LLM, VTU, Acharya Institute">
+<meta name="author" content="Ayush H Mane">
+
+
+<!-- Open Graph (Social Preview) -->
+<meta property="og:title" content="Ayush H Mane — AI & ML Engineer Portfolio">
+<meta property="og:description" content="AI, Cybersecurity & LLM Projects. Explore my work in Machine Learning, Threat Detection, and Data Intelligence.">
+<meta property="og:image" content="https://ayush-h-mane.github.io/ayush-portfolio/preview.jpg">
+<meta property="og:url" content="https://ayush-h-mane.github.io/ayush-portfolio/">
+<meta property="og:type" content="website">
+
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Caveat:wght@500&display=swap" rel="stylesheet">
+
+
+<!-- CSS -->
+<link rel="stylesheet" href="styles.css" />
 </head>
+
 
 <body class="dark">
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="nav-left">Ayush</div>
-    <div class="nav-center">
-      <a href="#hero">Home</a>
-      <a href="#about">About</a>
-      <a href="#education">Education</a>
-      <a href="#activities">Activities</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-    </div>
-    <button id="themeToggle" class="theme-btn">🌙</button>
-  </nav>
+
+<!-- SCROLL PROGRESS -->
+<div id="scroll-progress"></div>
+
+
+<!-- NAVBAR -->
+<nav class="navbar">
+<div class="nav-left">Ayush H Mane</div>
+
+
+<div class="nav-center">
+<a href="#hero" class="nav-link">Home</a>
+<a href="#about" class="nav-link">About</a>
+<a href="#education" class="nav-link">Education</a>
+<a href="#experience" class="nav-link">Experience</a>
+<a href="#certifications" class="nav-link">Certifications</a>
+<a href="#activities" class="nav-link">Activities</a>
+<a href="#projects" class="nav-link">Projects</a>
+<a href="#skills" class="nav-link">Skills</a>
+<a href="#contact" class="nav-link">Contact</a>
+</div>
+
+
+<!-- THEME SLIDER SWITCH -->
+<div class="theme-switch">
+<input type="checkbox" id="themeToggle" title="Toggle light and dark theme">
+<label for="themeToggle" class="switch">
+<span class="slider"></span>
+</label>
+</div>
+</nav>
 
   <!-- HERO -->
   <section class="hero-section" id="hero">
+
+    <!-- IMAGE SLIDER -->
+    <div class="image-slider">
+      <div class="slider-track">
+        <img src="pic1.JPG" alt="Slide 1">
+        <img src="pic2.png" alt="Slide 2">
+        <img src="pic3.png" alt="Slide 3">
+        <img src="pic2.png" alt="Slide 2">
+        <img src="pic1.JPG" alt="Slide 1 duplicate">
+        <img src="pic2.png" alt="Slide 2 duplicate">
+        <img src="pic3.png" alt="Slide 3 duplicate">
+        <img src="pic2.png" alt="Slide 2 duplicate">
+      </div>
+    </div>
+
     <div class="img-wrapper">
-      <img src="pic1.JPG" alt="Ayush">
+      <img src="pic1.JPG" alt="Ayush H Mane">
     </div>
 
     <h1 class="fade-in">Ayush H Mane</h1>
@@ -47,7 +98,7 @@
     </div>
 
     <div class="buttons fade-in">
-      <a href="resume 3.png" download class="btn">Download Resume</a>
+      <a href="resume 1.png" download class="btn">Download Resume</a>
       <a href="#projects" class="btn secondary">View Projects</a>
     </div>
   </section>
@@ -57,7 +108,7 @@
     <h2>About Me</h2>
 
     <p>
-      I am an AIML engineering student with a strong interest in building AI-powered systems that solve
+      Motivated AIML engineering student with a strong interest in building AI-powered systems that solve
       real-world cybersecurity and data intelligence challenges. My technical work includes developing
       intrusion detection models, malicious URL classifiers, and LLM-driven financial analysis tools
       using frameworks such as Scikit-Learn, LangChain, Streamlit, and Groq LLMs. I enjoy converting
@@ -70,9 +121,8 @@
       initiatives. I have represented my institution in several high-visibility events, including
       securing <strong>1st place in Yuva Dasara Mime</strong>, competing in <strong>Rangarourbha
       state-level cultural programs</strong>, and contributing to university cultural activities
-      through <strong>team utkarsh.</strong> Currently active member of <strong>Acharya Kannada Vedike</strong>. I was also a 
-      <strong>Coordinator for Srishti Innovation Exchange 2025</strong>, which strengthened my
-      leadership, teamwork, and event management skills.
+      through <strong>Team Utkarsh</strong>. I am also an active member of <strong>Acharya Kannada Vedike</strong> and was a
+      <strong>Coordinator for Srishti Innovation Exchange 2025</strong>, strengthening my leadership and event management skills.
     </p>
 
     <p>
@@ -80,150 +130,263 @@
       with creativity, collaboration, and leadership. I am passionate about building AI systems that
       create real, meaningful impact.
     </p>
+
+   <!-- Handwritten Signature -->
+<div class="signature-wrap">
+  <!-- Light Theme Signature -->
+  <img src="black signature.svg" alt="Ayush H Mane Signature" class="signature-img light-signature">
+
+  <!-- Dark Theme Signature -->
+  <img src="white signature.svg" alt="Ayush H Mane Signature" class="signature-img dark-signature">
+</div>
+
   </section>
 
-<!-- EDUCATION -->
-<section class="section reveal" id="education">
-  <h2>Education</h2>
+  <!-- EDUCATION -->
+  <section class="section reveal" id="education">
+    <h2>Education</h2>
 
-  <div class="card">
-    <h3>Bachelor of Engineering (AIML)</h3>
-    <p class="meta">Acharya Institute of Technology — VTU</p>
-    <p>
-      Currently pursuing my B.E in Artificial Intelligence & Machine Learning with a CGPA of 7.35.
-      My coursework includes Machine Learning, Data Structures, Operating Systems, Cybersecurity,
-      Database Management Systems, Deep Learning, and AI Applications.
+    <div class="card">
+      <h3>Bachelor of Engineering (AIML)</h3>
+      <p class="meta">Acharya Institute of Technology — VTU</p>
+      <p>
+        Currently pursuing B.E in Artificial Intelligence & Machine Learning with a CGPA of 7.35.
+        Coursework includes Machine Learning, Cybersecurity, DBMS, DSA, AI, and Deep Learning.
+      </p>
+    </div>
+  </section>
+
+    <!-- SKILLS -->
+  <section class="section reveal" id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <span class="chip">Python</span>
+      <span class="chip">C / C++</span>
+      <span class="chip">Machine Learning</span>
+      <span class="chip">AI</span>
+      <span class="chip">LLMs (Groq)</span>
+      <span class="chip">LangChain</span>
+      <span class="chip">Streamlit</span>
+      <span class="chip">Web Dev</span>
+      <span class="chip">R Programming</span>
+      <span class="chip">DBMS</span>
+    </div>
+  </section>
+ 
+  <!-- EXPERIENCE -->
+  <section class="section reveal" id="experience">
+    <h2>Experience & Internships</h2>
+
+    <div class="card">
+      <h3>AI Intern</h3>
+      <p class="meta">Glow Logics — 2025</p>
+      <ul>
+        <li>Worked on feature engineering and model evaluation.</li>
+        <li>Built Streamlit apps for real-time inference.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section class="section reveal" id="certifications">
+    <h2>Certifications</h2>
+
+    <div class="cert-grid">
+      <div class="card cert-card">
+        <h3>Artificial Intelligence & Machine Learning</h3>
+        <p class="meta">Glow Logics • 2025</p>
+        <a href="C:\Portfolio\GL_Course_certificate.png" target="_blank" class="cert-link">View Certificate</a>
+      </div>
+
+      <div class="cert-grid">
+      <div class="card cert-card">
+        <h3>Data Engineering Foundations</h3>
+        <p class="meta">Linkedin Learning • 2025</p>
+        <a href="https://www.linkedin.com/learning/certificates/48a0828f00f2aacab578d03de2b2eec3b6862f78da43529b7900a34fee906762?trk=share_certificate" target="_blank" class="cert-link">View Certificate</a>
+      </div>
+
+      <div class="cert-grid">
+      <div class="card cert-card">
+        <h3>Networking and Administration Fundamentals</h3>
+        <p class="meta">Linkedin Learning • 2025</p>
+        <a href="https://www.linkedin.com/learning/certificates/d327402fb36cbdb398d9c38eb906ae82123313c13d0bd1f0f2c37e234dd2c7bb?trk=share_certificate" target="_blank" class="cert-link">View Certificate</a>
+      </div>
+
+      <div class="card cert-card">
+        <h3>Data Science Using Python</h3>
+        <p class="meta">Linkedin Learning • 2024</p>
+        <a href="https://www.linkedin.com/learning/certificates/c4ffd14dd8114b7ac10b80aa9ef8de8e1826eda769269e187bd7456990ecf462?trk=share_certificate" target="_blank" class="cert-link">View Certificate</a>
+      </div>
+    </div>
+
+    <div class="card cert-card">
+        <h3>Career Essentials in Generative AI</h3>
+        <p class="meta">Linkedin Learning • 2024</p>
+        <a href="https://www.linkedin.com/learning/certificates/c64412b0c37ca2adcdf539c667dfae9dad0a0d48442eb58765333016cc7bd560?trk=share_certificate" target="_blank" class="cert-link">View Certificate</a>
+      </div>
+    </div>
+
+    <div class="cert-grid">
+      <div class="card cert-card">
+        <h3>Python For Everybody</h3>
+        <p class="meta">Coursera • 2024</p>
+        <a href="https://coursera.org/share/2a8a38abccd5e8e60e43be5ca7d68665" target="_blank" class="cert-link">View Certificate</a>
+      </div>
+
+      <div class="cert-grid">
+      <div class="card cert-card">
+        <h3>Project Management</h3>
+        <p class="meta">Coursera • 2024</p>
+        <a href="https://coursera.org/share/ceb4bc85a44874c978b5f02948b39bed" target="_blank" class="cert-link">View Certificate</a>
+      </div>
+
+      <div class="cert-grid">
+      <div class="card cert-card">
+        <h3>Englesh for Career Development</h3>
+        <p class="meta">Coursera • 2023</p>
+        <a href="https://coursera.org/share/02656dcbe8bb765659f30e2d7baf576e" target="_blank" class="cert-link">View Certificate</a>
+      </div>
+
+      <div class="cert-grid">
+      <div class="card cert-card">
+        <h3>IT Automation with Python</h3>
+        <p class="meta">Coursera • 2024</p>
+        <a href="https://coursera.org/share/7105a6c82cad28982bb31387fab8cfd1" target="_blank" class="cert-link">View Certificate</a>
+      </div>
+  </section>
+
+  <!-- ACTIVITIES -->
+  <section class="section reveal" id="activities">
+    <h2>Activities & Achievements</h2>
+
+    <div class="card">
+      <ul>
+        <li>VTU Medal for Installation</li>
+        <li>1st Place — Yuva Dasara Mime</li>
+        <li>Winner — Rangarourbha State-Level Competitions</li>
+        <li>Member — Acharya Kannada Vedike</li>
+        <li>Coordinator — Srishti Innovation Exchange 2025</li>
+      </ul>
+    </div>
+  </section>
+ 
+  <!-- PROJECTS -->
+  <section class="section reveal" id="projects">
+    <h2>Projects</h2>
+
+    <div class="card project-card">
+      <div class="project-header">
+        <h3>Cyber Threat Detection using ML</h3>
+        <a href="https://github.com/ayush-h-mane/Cyber-Threat-Detection-Using-Machine-Learning" target="_blank" rel="noopener" class="project-link">
+          <img src="github.png" alt="GitHub Repo">
+        </a>
+      </div>
+      <p class="meta">Python • Scikit-Learn • NIDS</p>
+      <p>A machine-learning intrusion detection system capable of detecting known & zero-day attacks.</p>
+    </div>
+
+    <div class="card project-card">
+      <div class="project-header">
+        <h3>ML-Enhanced Suspicious URL Detection</h3>
+        <a href="https://github.com/ayush-h-mane/ML-Enhanced-Suspicious-URL-Detection-for-Cybersecurity" target="_blank" rel="noopener" class="project-link">
+          <img src="github.png" alt="GitHub Repo">
+        </a>
+      </div>
+      <p class="meta">WHOIS/SSL • Feature Engineering • Streamlit</p>
+      <p>ML-based phishing URL classifier with threat scoring, metadata analysis, and UI.</p>
+    </div>
+
+    <div class="card project-card">
+      <div class="project-header">
+        <h3>AI-Powered Financial Report Analysis</h3>
+        <a href="#" target="_blank" rel="noopener" class="project-link">
+          <img src="github.png" alt="GitHub Repo">
+        </a>
+      </div>
+      <p class="meta">Groq LLM • LangChain</p>
+      <p>Extracts insights from financial reports using LLMs and automated analysis pipelines.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section reveal" id="contact">
+    <h2>Contact</h2>
+
+    <p><span class="contact-icon">📧</span>
+      <strong><a href="mailto:ayushhmane@gmail.com" class="contact-link">ayushhmane@gmail.com</a></strong>
     </p>
-  </div>
 
-</section>
+    <p><span class="contact-icon">📞</span>
+      <strong><a href="tel:+919535174767" class="contact-link">9535174767</a></strong>
+    </p>
+  </section>
 
-<!-- ACTIVITIES -->
-<section class="section reveal" id="activities">
-  <h2>Activities & Achievements</h2>
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Ayush H Mane — All Rights Reserved
+  </footer>
 
-  <div class="card">
-    <ul>
-      <li>VTU Medal for Installation</li>
-      <li>1st Place — Yuva Dasara Mime</li>
-      <li>Winner — Rangarourbha State-Level Competitions</li>
-      <li>Member — Acharya Kannada Vedike</li>
-      <li>Coordinator — Srishti Innovation Exchange 2025</li>
-      <li>Active participant in cultural and theatre events</li>
-    </ul>
-  </div>
-</section>
+  <!-- THEME TOGGLE SCRIPT -->
+  <script>
+    const toggle = document.getElementById("themeToggle");
+    const body = document.body;
 
-<!-- PROJECTS -->
-<section class="section projects reveal" id="projects">
-  <h2>Projects</h2>
+    // Default: Dark mode
+    toggle.checked = false;
 
-  <div class="card project-card">
-    <div class="project-header">
-      <h3>AI-Powered Financial Report Analysis</h3>
-      <a href="#" target="_blank" class="project-link">
-        <img src="github.png" alt="GitHub Repo">
-      </a>
-    </div>
-    <p class="meta">Groq LLM • LangChain</p>
-    <p>Extracts insights from financial reports using LLMs and automated analysis pipelines.</p>
-  </div>
+    toggle.addEventListener("change", () => {
+      body.classList.toggle("light");
+      body.classList.toggle("dark");
+    });
+  </script>
 
-  <div class="card project-card">
-    <div class="project-header">
-      <h3>Cyber Threat Detection using ML</h3>
-      <a href="https://github.com/ayush-h-mane/Cyber-Threat-Detection-Using-Machine-Learning" 
-         target="_blank" class="project-link">
-        <img src="github.png" alt="GitHub Repo">
-      </a>
-    </div>
-    <p class="meta">Python • Scikit-Learn • NIDS</p>
-    <p>Real-time intrusion detection system capable of identifying known and zero-day attacks.</p>
-  </div>
-
-  <div class="card project-card">
-    <div class="project-header">
-      <h3>ML-Enhanced Suspicious URL Detection</h3>
-      <a href="https://github.com/ayush-h-mane/ML-Enhanced-Suspicious-URL-Detection-for-Cybersecurity" 
-         target="_blank" class="project-link">
-        <img src="github.png" alt="GitHub Repo">
-      </a>
-    </div>
-    <p class="meta">Feature Engineering • WHOIS/SSL • Streamlit</p>
-    <p>Machine-learning-based URL classifier with metadata scanning and threat scoring.</p>
-  </div>
-
-</section>
-
-<!-- SKILLS -->
-<section class="section skills reveal" id="skills">
-  <h2>Skills</h2>
-  <div class="skills-grid">
-    <span class="chip">Python</span>
-    <span class="chip">C / C++</span>
-    <span class="chip">Machine Learning</span>
-    <span class="chip">Artificial Intelligence</span>
-    <span class="chip">LLMs (Groq)</span>
-    <span class="chip">LangChain</span>
-    <span class="chip">Streamlit</span>
-    <span class="chip">R Programming</span>
-    <span class="chip">Web Development</span>
-    <span class="chip">DBMS</span>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="section contact reveal" id="contact">
-  <h2>Contact</h2>
-
-  <p>
-    <span class="contact-icon">📧</span>
-    <strong><a href="mailto:ayushhmane@gmail.com" class="contact-link">ayushhmane@gmail.com</a></strong>
-  </p>
-
-  <p>
-    <span class="contact-icon">📞</span>
-    <strong><a href="tel:+919535174767" class="contact-link">9535174767</a></strong>
-  </p>
-
-</section>
-
-<footer>
-  © 2025 Ayush H Mane • All Rights Reserved
-</footer>
-
-<!-- THEME TOGGLE SCRIPT -->
-<script>
-const toggle = document.getElementById('themeToggle');
-const body = document.body;
-toggle.addEventListener('click', () => {
-  body.classList.toggle('light');
-  body.classList.toggle('dark');
-  toggle.textContent = body.classList.contains('light') ? "☀️" : "🌙";
-});
-</script>
-
-<!-- SCROLL REVEAL SCRIPT -->
-<script>
-function revealOnScroll() {
-  const reveals = document.querySelectorAll('.reveal');
-  reveals.forEach(section => {
-    const rect = section.getBoundingClientRect();
-    if (rect.top < window.innerHeight - 100) {
-      section.classList.add('active');
+  <!-- SCROLL REVEAL -->
+  <script>
+    function revealOnScroll() {
+      const elements = document.querySelectorAll(".reveal");
+      elements.forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+          el.classList.add("active");
+        }
+      });
     }
-  });
-}
+    window.addEventListener("scroll", revealOnScroll);
+    window.addEventListener("load", revealOnScroll);
+  </script>
 
-window.addEventListener('scroll', revealOnScroll);
-window.addEventListener('load', revealOnScroll);
-</script>
+  <!-- SCROLL PROGRESS BAR -->
+  <script>
+    window.addEventListener("scroll", () => {
+      const scrollTop = document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (scrollTop / height) * 100;
+      document.getElementById("scroll-progress").style.width = scrolled + "%";
+    });
+  </script>
+
+  <!-- ACTIVE NAVBAR HIGHLIGHT -->
+  <script>
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        if (pageYOffset >= sectionTop) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
-
-
-
-
-
-

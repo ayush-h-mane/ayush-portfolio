@@ -5,23 +5,53 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Inter', sans-serif;
-  transition: 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .dark {
-  background: #0b0e14;
-  color: #e5e7eb;
+  --bg-main: #0b0e14;
+  --bg-card: rgba(255,255,255,0.04);
+  --border-card: rgba(255,255,255,0.06);
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+  --accent-primary: #22d3ee;   /* cyan */
+  --accent-secondary: #10b981; /* emerald */
+  --accent-tertiary: #6366f1;  /* indigo */
+
+  background: var(--bg-main);
+  color: var(--text-main);
 }
 
 .light {
-  background: #f5f5f5;
-  color: #0b0e14;
+  --bg-main: #f8fafc;
+  --bg-card: #ffffff;
+  --border-card: #e5e7eb;
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --accent-primary: #2563eb;   /* blue */
+  --accent-secondary: #059669; /* green */
+  --accent-tertiary: #f97316;  /* orange */
+
+  background: var(--bg-main);
+  color: var(--text-main);
 }
 
 h1, h2, h3 {
   font-family: 'Space Grotesk', sans-serif;
 }
 
+/* ===========================
+   SCROLL PROGRESS BAR
+   =========================== */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0%;
+  background: linear-gradient(90deg, #00f5ff, #00ff99);
+  z-index: 9999;
+}
 
 /* ===========================
    NAVBAR
@@ -32,12 +62,14 @@ h1, h2, h3 {
   width: 100%;
   height: 60px;
   padding: 0 30px;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: rgba(255,255,255,0.05);
   backdrop-filter: blur(10px);
   z-index: 1000;
+  color: var(--text-main);
 }
 
 .nav-left {
@@ -54,14 +86,108 @@ h1, h2, h3 {
 }
 
 .nav-center a:hover {
-  color: #3b82f6;
+  color: var(--accent-primary);
 }
 
-.theme-btn {
-  font-size: 22px;
-  background: none;
-  border: none;
+.nav-link.active {
+  color: var(--accent-primary);
+  font-weight: 600;
+  border-bottom: 2px solid var(--accent-primary);
+}
+
+/* ===========================
+   THEME SLIDER SWITCH (GLOW + ICONS)
+   =========================== */
+.theme-switch {
+  margin-right: 10px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 56px;
+  height: 28px;
   cursor: pointer;
+}
+
+/* Track */
+.slider {
+  position: absolute;
+  inset: 0;
+  background: var(--border-card);
+  border-radius: 20px;
+  transition: 0.35s ease;
+  box-shadow: inset 0 0 0 rgba(0,0,0,0);
+}
+
+/* Knob with icon */
+.slider::before {
+  content: "☀"; /* minimal sun */
+  position: absolute;
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  top: 3px;
+  background: var(--accent-primary);
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.35s ease, background 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Decorative moon on the right (outline look) */
+.slider::after {
+  content: "☾";
+  position: absolute;
+  right: 7px;
+  top: 4px;
+  font-size: 14px;
+  color: var(--text-muted);
+  opacity: 0.6;
+}
+
+/* ===========================
+   GLOW ANIMATION
+   =========================== */
+@keyframes softGlow {
+  0% {
+    box-shadow: 0 0 6px rgba(34, 211, 238, 0.35),
+                0 0 12px rgba(34, 211, 238, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 10px rgba(34, 211, 238, 0.55),
+                0 0 20px rgba(34, 211, 238, 0.35);
+  }
+  100% {
+    box-shadow: 0 0 6px rgba(34, 211, 238, 0.35),
+                0 0 12px rgba(34, 211, 238, 0.25);
+  }
+}
+
+/* ===========================
+   CHECKED → LIGHT MODE
+   =========================== */
+input:checked + .switch .slider {
+  background: var(--accent-secondary);
+}
+
+input:checked + .switch .slider::before {
+  transform: translateX(28px);
+  content: "☾"; /* minimal moon */
+  background: var(--accent-tertiary);
+  animation: softGlow 2.2s ease-in-out infinite;
+}
+
+/* Glow on hover */
+.switch:hover .slider::before {
+  animation: softGlow 2.2s ease-in-out infinite;
 }
 
 
@@ -71,12 +197,42 @@ h1, h2, h3 {
 .hero-section {
   text-align: center;
   padding: 120px 20px 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-slider {
+  width: 100%;
+  overflow: hidden;
+  margin: 0 0 20px;
+  order: -1;
+}
+
+.slider-track {
+  display: flex;
+  width: calc(250px * 8);
+  animation: scroll 20s linear infinite;
+}
+
+.slider-track img {
+  width: 250px;
+  height: 350px;
+  object-fit: cover;
+  margin-right: 15px;
+  border-radius: 12px;
+  opacity: 0.9;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 .img-wrapper {
   width: 200px;
   height: 200px;
-  margin: auto;
+  margin: 10px auto 0;
   border-radius: 50%;
   overflow: hidden;
 }
@@ -88,11 +244,10 @@ h1, h2, h3 {
 }
 
 .tagline {
-  color: #9ca3af;
+  color: var(--text-muted);
   margin-top: 10px;
   font-size: 1.1rem;
 }
-
 
 /* ===========================
    SOCIAL GLASS CARD
@@ -103,7 +258,6 @@ h1, h2, h3 {
   border-radius: 20px;
   background: rgba(255,255,255,0.08);
   backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
   display: inline-flex;
   gap: 22px;
   align-items: center;
@@ -124,7 +278,6 @@ h1, h2, h3 {
   filter: brightness(1.4);
 }
 
-
 /* ===========================
    BUTTONS
    =========================== */
@@ -138,23 +291,22 @@ h1, h2, h3 {
 }
 
 .dark .btn {
-  background: #10b981;
-  color: #0b0e14;
+  background: var(--accent-secondary);
+  color: #021d17;
 }
 
 .dark .btn.secondary {
-  background: #3b82f6;
+  background: var(--accent-primary);
 }
 
 .light .btn {
-  background: #0b0e14;
+  background: var(--accent-primary);
   color: white;
 }
 
 .light .btn.secondary {
-  background: #3b82f6;
+  background: var(--accent-tertiary);
 }
-
 
 /* ===========================
    SECTIONS
@@ -171,42 +323,49 @@ h2 {
   margin-bottom: 25px;
 }
 
-
-/* ===========================
-   ABOUT SECTION
-   =========================== */
 .about p {
   text-align: justify;
   line-height: 1.7;
   margin-bottom: 18px;
-  font-family: 'Robotos', sans-serif;
 }
 
-
-/* ===========================
-   CARDS
-   =========================== */
 .card {
   border-radius: 14px;
   padding: 22px;
   margin: 20px 0;
 }
 
-.dark .card {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.06);
-}
-
+.dark .card,
 .light .card {
-  background: white;
-  border: 1px solid #ccc;
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
 }
 
 .meta {
-  color: #3b82f6;
+  color: var(--accent-tertiary);
   font-size: 0.9rem;
 }
 
+/* ===========================
+   CERTIFICATIONS
+   =========================== */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.cert-card { text-align: center; }
+
+.cert-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--accent-secondary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.cert-link:hover { color: var(--accent-primary); }
 
 /* ===========================
    PROJECT CARDS
@@ -229,7 +388,6 @@ h2 {
   filter: brightness(1.2);
 }
 
-
 /* ===========================
    SKILLS
    =========================== */
@@ -246,38 +404,20 @@ h2 {
   font-size: 14px;
 }
 
-.dark .chip {
-  background: rgba(255,255,255,0.06);
-}
-
-.light .chip {
-  background: #e5e7eb;
-  color: black;
-}
-
+.dark .chip { background: rgba(255,255,255,0.06); }
+.light .chip { background: #e2e8f0; color: black; }
 
 /* ===========================
-   CONTACT SECTION
+   CONTACT
    =========================== */
-.contact-icon {
-  margin-right: 8px;
-  font-size: 1.2rem;
-}
+.contact-icon { margin-right: 8px; font-size: 1.2rem; }
 
 .contact-link {
-  color: #3b82f6;
+  color: var(--accent-primary);
   text-decoration: none;
 }
 
-.contact-link:hover {
-  color: #10b981;
-}
-
-.qr img {
-  width: 120px;
-  height: 120px;
-}
-
+.contact-link:hover { color: var(--accent-secondary); }
 
 /* ===========================
    SCROLL REVEAL
@@ -288,11 +428,7 @@ h2 {
   transition: all 0.8s ease;
 }
 
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
+.reveal.active { opacity: 1; transform: translateY(0); }
 
 /* ===========================
    FOOTER
@@ -304,31 +440,73 @@ footer {
   color: #6b7280;
 }
 
-
 /* ===========================
-   RESPONSIVE DESIGN
+   RESPONSIVE
    =========================== */
 @media (max-width: 768px) {
-  .nav-center {
-    display: none;
-  }
+  .nav-center { display: none; }
+  .hero-section { padding-top: 140px; }
+  .img-wrapper { width: 160px; height: 160px; }
+  .icon img { width: 28px; height: 28px; }
+  h2 { font-size: 26px; }
+  .slider-track img { width: 200px; height: 120px; }
+}
 
-  .hero-section {
-    padding-top: 140px;
-  }
+/* ===========================
+   HANDWRITTEN SIGNATURE (THEME AWARE)
+   =========================== */
 
-  .img-wrapper {
-    width: 160px;
-    height: 160px;
-  }
+.signature-wrap {
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+}
 
-  .icon img {
-    width: 28px;
-    height: 28px;
-  }
+/* Base signature style */
+.signature-img {
+  width: 240px;
+  max-width: 80%;
+  transform: rotate(-3deg);
+  transition: transform 0.4s ease, filter 0.4s ease;
+  pointer-events: none;
+}
 
-  h2 {
-    font-size: 26px;
+/* Show only based on theme */
+.light .dark-signature { display: none; }
+.dark .light-signature { display: none; }
+
+/* Premium hover motion */
+.signature-wrap:hover .signature-img {
+  transform: rotate(-1deg) translateY(-4px) scale(1.03);
+  filter: drop-shadow(0 10px 22px rgba(0,0,0,0.25));
+}
+
+/* Subtle entrance animation */
+.signature-img {
+  opacity: 0;
+  animation: signatureFade 1.6s ease forwards;
+}
+
+@keyframes signatureFade {
+  from {
+    opacity: 0;
+    transform: translateY(10px) rotate(-5deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(-3deg);
   }
 }
 
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .signature-wrap {
+    justify-content: center;
+    padding-right: 0;
+  }
+
+  .signature-img {
+    width: 180px;
+  }
+}

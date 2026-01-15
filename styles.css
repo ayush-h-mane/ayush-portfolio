@@ -204,7 +204,7 @@ input:checked + .switch .slider::before {
 
 .image-slider {
   width: 100%;
-  overflow: hidden;
+  height: auto;
   margin: 0 0 20px;
   order: -1;
 }
@@ -218,7 +218,7 @@ input:checked + .switch .slider::before {
 .slider-track img {
   width: 250px;
   height: 350px;
-  object-fit: cover;
+  object-fit: contain;
   margin-right: 15px;
   border-radius: 12px;
   opacity: 0.9;
